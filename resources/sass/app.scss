@@ -1,0 +1,140 @@
+.map-image {
+    padding: 15px 30px 15px 30px;
+    border-radius: 10px;
+    width: 100%;
+}
+
+nav {
+    border-bottom: 1px solid #ddd;
+}
+
+.navbar-nav {
+    gap: 30px;
+    @media (max-width: 768px) {
+        gap: 0;
+    }
+}
+
+.user {
+    height: 40px;
+}
+
+.dropdown {
+    width: 80px;
+    @media (max-width: 768px) {
+        width: 100%;
+    }
+}
+
+.dropdown-toggle {
+    display: flex;
+    flex-direction: row-reverse;
+    gap: 10px;
+}
+
+.btn-check:checked + .btn,
+.btn.active,
+.btn.show,
+.btn:first-child:active,
+:not(.btn-check) + .btn:active {
+    color: var(--bs-btn-active-color);
+    background-color: var(--bs-btn-active-bg);
+    border-color: transparent;
+}
+
+.btn-listing {
+    border-radius: 30px;
+}
+
+.card-img-top {
+    border-radius: 15px;
+    max-height: 300px;
+    object-fit: cover;
+}
+
+.superscript {
+    font-size: 0.65em;
+    margin-left: -0.2em;
+    vertical-align: super;
+}
+
+a {
+    text-decoration: none;
+}
+
+.card {
+    border-radius: 15px;
+    .bottom-card-text {
+        opacity: 0.6;
+        gap: 25px;
+    }
+}
+
+.card-body {
+    padding: 10px 10px 0 10px;
+    p {
+        margin-bottom: 0.4rem;
+    }
+}
+
+.list-unstyled {
+    li {
+        padding: 3px 0;
+        input, label {
+            cursor: pointer;
+        }
+        input[type="checkbox"]:checked + label {
+            color: var(--bs-primary);
+        }
+    }
+}
+
+.badge {
+    color: var(--bs-primary);
+    background: #eee !important;
+}
+
+.price-range {
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+}
+
+.form-select {
+    border-radius: 15px;
+    width: auto;
+    cursor: pointer;
+}
+
+.filter {
+    @media (max-width: 768px) {
+        padding: 0 15px;
+    }
+    a {
+        color: #000;
+        opacity: 0.65;
+        text-decoration: underline;
+    }
+}
+
+.navbar-toggler {
+    &:focus,
+    &:active {
+        outline: none;
+        box-shadow: none;
+    }
+}
+
+.collapse {
+    transition: height 0.35s ease;
+}
+
+.collapse.collapsing {
+    height: 0;
+    overflow: hidden;
+}
+
+.form-select {
+    box-shadow: none !important;
+    border: 1px solid #ddd !important;
+}
