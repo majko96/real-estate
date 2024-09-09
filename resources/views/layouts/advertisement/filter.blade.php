@@ -7,7 +7,7 @@
         </div>
         <div class="d-flex align-items-center gap-1">
             <small>
-                <a href="#">
+                <a href="#" id="reset">
                     Reset filters
                 </a>
             </small>
@@ -186,4 +186,28 @@
         filterCollapse.addEventListener('hidden.bs.collapse', updateButtonText);
         updateButtonText();
     });
+
+    var checkboxes = document.querySelectorAll('.list-unstyled input[type="checkbox"]');
+    var badge = document.querySelector('.badge');
+
+    function updateBadgeCount() {
+        badge.textContent = document.querySelectorAll('.list-unstyled input[type="checkbox"]:checked').length;
+    }
+
+    checkboxes.forEach(function (checkbox) {
+        checkbox.addEventListener('change', function () {
+            updateBadgeCount();
+        });
+    });
+
+    document.getElementById('reset').addEventListener('click', function (e) {
+        e.preventDefault();
+        var checkboxes = document.querySelectorAll('.list-unstyled input[type="checkbox"]');
+        checkboxes.forEach(function (checkbox) {
+            checkbox.checked = false;
+            checkbox.parentElement.style.opacity = '0.65';
+        });
+        updateBadgeCount();
+    });
+    updateBadgeCount();
 </script>
